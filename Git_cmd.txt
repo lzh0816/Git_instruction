@@ -1,0 +1,34 @@
+git add --- 添加文件进缓存区
+git commit -m --- 添加注释
+git log --pretty=oneline ---显示版本log
+git reset --hard [提交编号] --- 回到过去
+git reflog ---穿梭未来的时空线
+
+
+线上仓库篇
+git clone 线上仓库地址 ---从线上的仓库克隆项目到当前目录下
+git push :
+提示403---权限不够
+解决办法：修改.git/config文件内容
+#将
+[remote "origin"]
+    url = https://github.com/用户名/仓库名.git
+ 修改为
+[remote "origin"]
+    url = https://用户名:密码@github.com/用户名/仓库名.git
+
+git pull :
+拉取线上仓库的最新版本。
+
+
+Branch:
+查看分支:git branch
+创建分支：git branch 分支名
+切换分支: git checkout 分支名
+删除分支：git branch -d 分支名        删除分支之前，要先退出你将要删除的分支，再进行删除
+合并分支: git merge 被合并的分支名
+
+
+
+如何解决冲突 避免冲突：上班 git pull  下班 git push
+
